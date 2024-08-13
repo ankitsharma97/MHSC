@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Mental Health Support Community{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Welcome, {{ request.session.name }}!</h1>
+    
+    <div class="row">
+        <!-- User Overview -->
+        <div class="col-lg-3 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Your Overview</h4>
+                    <p>Recent Activity: <span class="text-info">No recent activity yet</span></p>
+                    <p>Upcoming Sessions: <span class="text-info">No sessions booked yet</span></p>
+                    <a href="{% url 'editprofile' %}" class="btn btn-primary btn-block">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Counseling Sessions -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Upcoming Counseling Sessions</h4>
+                    <p>We are working on integrating a counseling session booking system. Stay tuned!</p>
+                    <a href="#" class="btn btn-secondary btn-block disabled">Book a Session</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Groups -->
+        <div class="col-lg-3 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Support Groups</h4>
+                    <p>Support groups will be available soon. Check back later to join or create groups.</p>
+                    <a href="#" class="btn btn-secondary btn-block disabled">View Groups</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Forum Participation -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Forum Activity</h4>
+                    <p>Forums are coming soon. You will be able to participate in discussions and connect with others.</p>
+                    <a href="#" class="btn btn-secondary btn-block disabled">Visit Forums</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource Library -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Resource Library</h4>
+                    <p>We're building a library of resources to support your mental health journey. Stay tuned!</p>
+                    <a href="#" class="btn btn-secondary btn-block disabled">Explore Resources</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crisis Support -->
+        <div class="col-lg-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Crisis Support</h4>
+                    <p>Crisis support services will be available soon. We are working on providing you with immediate help options.</p>
+                    <a href="#" class="btn btn-secondary btn-block disabled">Get Help Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Community Events -->
+        <div class="col-lg-12 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Upcoming Community Events</h4>
+                    <p>We are planning community events focused on mental health awareness. Check back soon for more information.</p>
+                    <a href="#" class="btn btn-secondary btn-block disabled">Register for Events</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

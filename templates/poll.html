@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Polls - MyProject{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center">Polls</h1>
+    <div class="row mt-4">
+        {% for data in poll_data %}
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem; height: 100%;">
+                <div class="card-header bg-primary text-white">
+                    {{ data.poll.question }}
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="">
+                        <input type="hidden" name="poll_id" value="{{ data.poll.id }}">
+                        {% csrf_token %}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option1_{{ data.poll.id }}" value="option1">
+                            <label class="form-check-label" for="option1_{{ data.poll.id }}">
+                                {{ data.poll.option1 }} - {{ data.option1_percentage|floatformat:2 }}%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option2_{{ data.poll.id }}" value="option2">
+                            <label class="form-check-label" for="option2_{{ data.poll.id }}">
+                                {{ data.poll.option2 }} - {{ data.option2_percentage|floatformat:2 }}%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option3_{{ data.poll.id }}" value="option3">
+                            <label class="form-check-label" for="option3_{{ data.poll.id }}">
+                                {{ data.poll.option3 }} - {{ data.option3_percentage|floatformat:2 }}%
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="option" id="option4_{{ data.poll.id }}" value="option4">
+                            <label class="form-check-label" for="option4_{{ data.poll.id }}">
+                                {{ data.poll.option4 }} - {{ data.option4_percentage|floatformat:2 }}%
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Vote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p class="text-center">No polls available.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

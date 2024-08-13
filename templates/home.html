@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Mental Health Support Community{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4">Welcome to the Mental Health Support Community</h1>
+        <p class="lead">We are dedicated to providing a safe, supportive, and engaging environment for those seeking mental health support. Explore our features to connect with professionals, access resources, and participate in our community.</p>
+    </div>
+
+    <div class="row text-center">
+        <!-- Counseling Sessions -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Counseling Sessions</h5>
+                    <p class="card-text">Easily book and manage appointments with licensed mental health professionals to get the support you need.</p>
+                    <a href="" class="btn btn-primary">Book a Session</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support Groups -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Support Groups</h5>
+                    <p class="card-text">Join or create support groups to connect with others who share similar experiences and build a support network.</p>
+                    <a href="" class="btn btn-primary">Explore Groups</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource Library -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Resource Library</h5>
+                    <p class="card-text">Access a wealth of mental health resources including articles, videos, and self-help tools to aid your journey.</p>
+                    <a href="" class="btn btn-primary">View Resources</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center">
+        <!-- Discussion Forums -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Discussion Forums</h5>
+                    <p class="card-text">Participate in moderated forums to share experiences, advice, and support with our community members.</p>
+                    <a href="" class="btn btn-primary">Join Discussions</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anonymity and Privacy -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Anonymity and Privacy</h5>
+                    <p class="card-text">Engage with our community while protecting your identity and personal information to ensure a safe environment.</p>
+                    <a href="" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crisis Support -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Crisis Support</h5>
+                    <p class="card-text">Access immediate support services if you are in urgent need of help. We are here to assist you 24/7.</p>
+                    <a href="" class="btn btn-danger">Get Help Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+        <div class="mb-4">
+            <h4 class="display-6">We Value Your Feedback</h4>
+            <p class="lead">Please help us improve by participating in our survey.</p>
+            <a href="https://forms.gle/W5m4kkv1dw15hmMs8" class="btn btn-success btn-lg" target="blank_">Take the Survey</a>
+        </div>
+
+        <a href="{% url 'signup' %}" class="btn btn-lg btn-primary">Join the Community</a>
+        <a href="{% url 'login' %}" class="btn btn-lg btn-secondary">Log In</a>
+        <a href="{% url 'admin:login' %}" class="btn btn-lg btn-info">Admin Login</a>
+    </div>
+</div>
+{% endblock %}

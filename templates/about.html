@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - Mental Health Support Community{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <main class="text-center">
+        <h1 class="display-4">About Us</h1>
+        <p class="lead mt-4">Welcome to the Mental Health Support Community, where our mission is to create a safe, supportive, and inclusive environment for individuals seeking mental health support. We draw inspiration from global best practices and aim to provide exceptional resources and care.</p>
+
+        <section class="mt-5">
+            <h2 class="display-5">Our Mission</h2>
+            <p>We believe in the global perspective that mental health is crucial to overall well-being. Our mission is to challenge the stigma associated with mental health and offer a platform for open discussions, professional support, and community connection. Inspired by successful international models like the UK's National Health Service (NHS) and Canada's Mental Health Commission, we strive to enhance accessibility and quality of mental health services.</p>
+        </section>
+
+        <section class="mt-5">
+            <h2 class="display-5">What We Offer</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Confidential Counseling:</strong> Book appointments with licensed professionals for private and compassionate care, inspired by the US's BetterHelp model.</li>
+                        <li class="list-group-item"><strong>Peer Support:</strong> Join support groups and forums to share experiences and learn from others, reflecting the peer support models seen in Australia’s Beyond Blue.</li>
+                        <li class="list-group-item"><strong>Educational Resources:</strong> Access a comprehensive library of articles, videos, and tools to manage your mental health, similar to the resources provided by the World Health Organization (WHO).</li>
+                        <li class="list-group-item"><strong>Crisis Intervention:</strong> Immediate support with resources linked to emergency services, following the guidelines set by international crisis intervention services.</li>
+                        <li class="list-group-item"><strong>Community Events:</strong> Participate in events focused on mental health awareness and education, echoing global initiatives like Mental Health Awareness Month.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img src="https://via.placeholder.com/500x300.png?text=Global+Support" alt="Global Support" class="img-fluid rounded">
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2 class="display-5">Our Values</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>Compassion:</strong> We approach every interaction with empathy and understanding, similar to the values upheld by global organizations like the Red Cross.</li>
+                        <li class="list-group-item"><strong>Inclusion:</strong> We respect diversity and promote equality, reflecting the inclusive approach seen in international mental health policies.</li>
+                        <li class="list-group-item"><strong>Confidentiality:</strong> We are committed to maintaining privacy, inspired by stringent confidentiality standards observed globally.</li>
+                        <li class="list-group-item"><strong>Empowerment:</strong> We strive to empower individuals to manage their mental health effectively, following the empowerment principles of the WHO.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img src="https://via.placeholder.com/500x300.png?text=Our+Values" alt="Our Values" class="img-fluid rounded">
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h2 class="display-5">Our Team</h2>
+            <p>Our dedicated team includes licensed mental health professionals, experienced counselors, and passionate community moderators. We draw from international best practices to provide the highest level of support, guidance, and resources, ensuring that our community members receive the best care possible.</p>
+            <img src="https://via.placeholder.com/800x400.png?text=Our+Team" alt="Our Team" class="img-fluid rounded mb-4">
+        </section>
+
+        <section class="mt-5">
+            <h2 class="display-5">Join Us</h2>
+            <p>Whether you are seeking support, looking to connect with others, or wish to contribute to our community, we invite you to join us. Together, we can create a positive impact on mental health.</p>
+            <a href="{% url 'signup' %}" class="btn btn-primary btn-lg m-2">Join the Community</a>
+        </section>
+    </main>
+</div>
+{% endblock %}
